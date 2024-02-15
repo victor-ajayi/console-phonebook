@@ -12,7 +12,7 @@ def print_headers() -> None:
     """Печатает заголовки csv файла"""
 
     headers = ["ФИО", "Организация", "Раб. тел", "Моб. тел"]
-    print(f"{headers[0]:^50} | {headers[1]:^20} | {headers[2]:^20} | {headers[3]:^20}")
+    print(f"{headers[0]:^40} | {headers[1]:^30} | {headers[2]:^20} | {headers[3]:^20}")
     print("-" * 120)
 
 
@@ -25,7 +25,7 @@ def print_contacts(contacts: list[dict[str, str]], paginate=False) -> None:
     for contact in contacts:
         full_name = f"{contact['surname']} {contact['name']} {contact['patronymic']}"
         print(
-            f"{full_name:^50} | {contact['org_name']:^20} | {contact['work_tel']:^20} | {contact['mobile_tel']:^20}"
+            f"{full_name:^40} | {contact['org_name']:^30} | {contact['work_tel']:^20} | {contact['mobile_tel']:^20}"
         )
 
 
